@@ -143,30 +143,10 @@ body {
 
 
 /* Footer */
-footer {
-  background-color: #3b2a22;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #cbb89d;
-}
-.next-btn {
-  display: inline-block;
-  margin: 1rem 2rem;
-  padding: 0.6rem 1.2rem;
-  background: linear-gradient(90deg, #f4c06b, #e0a84c);
-  color: #2e1f17;
-  font-weight: bold;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.next-btn:hover {
-  transform: scale(1.05);
-}
 
 .social-footer {
+  width: 100%;
+  box-shadow: none;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
@@ -184,7 +164,21 @@ footer {
 .social-icons a:hover {
   text-decoration: underline;
 }
+.next-btn {
+  display: inline-block;
+  margin: 1rem 2rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #f4c06b, #e0a84c);
+  color: #2e1f17;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
 
+.next-btn:hover {
+  transform: scale(1.05);
+}
 /* Responsive layout */
 @media (max-width: 768px) {
   .hero {

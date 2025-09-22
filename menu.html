@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coffee Menu Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2e1f17;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #f4c06b;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .carousel {
+      position: relative;
+      width: 405px;
+      height: 550px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 100px rgba(0,0,0,0.5);
+      background-color: rgba(255,255,255,0.05);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+
+    .nav button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 1.5em;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .nav button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .nav-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .nav-btn {
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #f4c06b, #d2691e);
+      color: #2e1f17;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .navbar {
+        width: 100%;
+        box-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b2a22;
+  padding: 1rem 2rem;
+  background-color: rgba(59, 42, 34, 0.9);
+  backdrop-filter: blur(5px);
+  border-bottom: 3px solid #f4c06b;
+
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #f4c06b;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #f4c06b;
+}
+.social-footer {
+  width: 100%;
+  box-shadow: none;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #cbb89d;
+  background-color: rgba(59, 42, 34, 0.9);
+  border-top: 1px solid #f4c06b;
+}
+
+.social-icons a {
+  color: #f4c06b;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+}
+
+    @media (max-width: 768px) {
+      .carousel {
+        width: 90%;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .slide img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+          <div class="logo"> ☕ Coffee Haven</div>
+          <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign in.html">Sign In</a></li>
+            
+          </ul>
+          
+        </nav>
+      </header>
+    
+  <h1>Our Coffee Menu</h1>
+
+  <div class="carousel">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="images/menu.jpeg" alt="Menu 1" /></div>
+      <div class="slide"><img src="images/menu1.jpeg" alt="Menu 2" /></div>
+      <div class="slide"><img src="images/Coffee menu.jpeg" alt="Menu 3" /></div>
+    </div>
+    <div class="nav">
+      <button onclick="prevSlide()">‹</button>
+      <button onclick="nextSlide()">›</button>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="home.html" class="nav-btn">← Back</a>
+    <a href="about.html" class="nav-btn">Next →</a>
+  </div>
+  <footer class="social-footer">
+    <p>© 2025 Coffee Haven | All Rights Reserved</p>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://tiktok.com" target="_blank">TikTok</a> |
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
+  </footer>
+  
+  <script src="scripts.js"></script>
+</body>
+
+</body>
+</html>

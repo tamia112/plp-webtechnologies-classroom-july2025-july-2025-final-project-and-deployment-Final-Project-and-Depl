@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Coffee Heaven</title>
+  <link rel="stylesheet" href="contact.css" />
+  
+  <a href="home.html" class="next-btn">back</a>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo"> ☕ Coffee Haven</div>
+          <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign in.html">Sign In</a></li>
+            
+      
+        </ul>
+          
+        </nav>
+      </header>
+    
+  <h1>Contact Coffee Heaven</h1>
+
+  <div class="contact-form">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button class="reveal-btn" onclick="toggleText()">send Message</button>
+
+  <div class="hidden-text" id="secret">
+    Thanks for reaching out! We'll get back to you faster than a double espresso ☕✨
+  </div>
+</div>
+<footer class="social-footer">
+  <p>© 2025 Coffee Haven | All Rights Reserved</p>
+  <div class="social-icons">
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://tiktok.com" target="_blank">TikTok</a> |
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+  </div>
+</footer>
+
+  <script >
+  function toggleText() {
+    const secret = document.getElementById('secret');
+    secret.style.display = secret.style.display === "none" ? "block" : "none";
+  }</script>
+</body>
+</html>
+
